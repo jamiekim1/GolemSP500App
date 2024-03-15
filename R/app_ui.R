@@ -16,7 +16,7 @@ app_ui <- function(request) {
     # Your application UI logic
     fluidPage(
       h2("A Random DT"),
-      DTOutput("data_table"),
+      plotOutput("data_table"),
       h2("A Random Plot"),
       plotOutput("plot"),
       h2("A Random Text"),
@@ -45,7 +45,8 @@ golem_add_external_resources <- function() {
       path = app_sys("C:/Users/jamie/OneDrive/School/WINTER 2024/FIN 488/SP500App/S&P_Hist_Weight"),
       app_title = "SP500App"
     )
+  )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
-  )
+
 }

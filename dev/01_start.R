@@ -46,8 +46,8 @@ usethis::use_code_of_conduct(contact = "Golem User")
 usethis::use_lifecycle_badge("Experimental")
 usethis::use_news_md(open = FALSE)
 
-## Use github ----
-usethis::use_github()
+## Use git ----
+usethis::use_git()
 
 ## Init Testing Infrastructure ----
 ## Create a template for tests

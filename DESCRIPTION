@@ -1,17 +1,27 @@
 Package: SP500App
-Title: An Amazing Shiny App
+Title: SP500 Weights
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
-License: What license is it under?
+    person("Jamie", "Kim", , "jamiek101699@gmail.com", role = c("cre", "aut"))
+Description: SP500 Weight Analysis
+License: MIT + file LICENSE
+URL: https://github.com/jamiekim1/GolemSP500App.git
+BugReports: https://github.com/jamiekim1/GolemSP500App.git/issues
 Imports: 
     config (>= 0.3.2),
+    DT,
     golem (>= 0.4.1),
+    readxl,
+    shinipsum,
     shiny (>= 1.8.0)
+Suggests: 
+    knitr,
+    rmarkdown,
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
 Encoding: UTF-8
+Language: en-US
 LazyData: true
 RoxygenNote: 7.3.1
+VignetteBuilder: knitr

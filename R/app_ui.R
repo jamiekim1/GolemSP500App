@@ -9,18 +9,20 @@ library(shiny)
 library(shinipsum)
 library(DT)
 
+
+
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      h2("A Random DT"),
-      plotOutput("data_table"),
-      h2("A Random Plot"),
-      plotOutput("plot"),
-      h2("A Random Text"),
-      tableOutput("text")
+    shiny::fluidPage(
+      shiny::mainPanel(
+        mod_Weights_ui(c("data_table", "plot")),
+          shiny::tabPanel(
+            h2("Sector Returns")
+        )
+      )
     )
   )
 }
@@ -50,3 +52,5 @@ golem_add_external_resources <- function() {
     # for example, you can add shinyalert::useShinyalert()
 
 }
+
+

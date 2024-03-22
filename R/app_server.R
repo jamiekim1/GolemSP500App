@@ -12,6 +12,8 @@ library(DT)
 library(ggplot2)
 
 app_server <- function(input, output, session) {
+  r <- reactiveValues()
+
   output$data_table <- renderPlot({
       ggplot2::ggplot(df2, aes(x = Date, y = Weights, col = Sectors)) +
       geom_line() +
@@ -32,9 +34,17 @@ app_server <- function(input, output, session) {
       labs(title = "Adjusted Sector Weights", x = "") +
       theme_minimal()
   })
-  output$text <- renderText({
-    random_text(nwords = 50)
+  output$retPlot<- renderPlot({
+    ggplot(sectorDf, aes(x = date, y = qLogRet, color = sector)) +
+      geom_line() +
+      labs(title = "Sector Returns", x = "") +
+      theme_minimal()
+
   })
+
 }
+
+
+
 
 

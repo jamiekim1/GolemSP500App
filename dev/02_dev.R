@@ -23,6 +23,8 @@ attachment::att_from_rscripts()
 ## Create a module infrastructure in R/
 golem::add_module(name = "Weights", with_test = F) # Name of the module
 golem::add_module(name = "Rets", with_test = F) # Name of the module
+golem::add_module(name = "compute", with_test = F) # compute/create small r
+
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
